@@ -189,7 +189,9 @@ public class GeneratorRunner {
                 directWrite = true;
                 if (outputFile.exists()) {
                     if (!outputFile.delete()) {
-                        throw new IOException("Could not delete existing inhabitant file " +
+                        // throw new IOException("Could not delete existing inhabitant file " +
+                        //        outputFile.getAbsolutePath() + " in the noSwap case");
+                        System.out.println("Could not delete existing inhabitant file " +
                                 outputFile.getAbsolutePath() + " in the noSwap case");
                     }
                 }
