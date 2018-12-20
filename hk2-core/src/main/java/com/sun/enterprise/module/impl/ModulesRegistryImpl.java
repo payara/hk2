@@ -20,7 +20,7 @@ import com.sun.enterprise.module.*;
 import com.sun.enterprise.module.common_impl.AbstractModulesRegistryImpl;
 import com.sun.enterprise.module.common_impl.ModuleId;
 import com.sun.enterprise.module.common_impl.AbstractFactory;
-
+import com.sun.enterprise.module.Module;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.List;

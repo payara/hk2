@@ -72,7 +72,7 @@
                         <scm>git</scm>
                         <scmOnly>true</scmOnly>
                     </configuration>
-                </plugin>
+                </plugin> 
             </plugins>
         </pluginManagement>
     </build>

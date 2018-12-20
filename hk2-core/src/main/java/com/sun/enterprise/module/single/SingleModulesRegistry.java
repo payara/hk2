@@ -18,7 +18,7 @@ package com.sun.enterprise.module.single;
 
 import com.sun.enterprise.module.*;
 import com.sun.enterprise.module.impl.ModulesRegistryImpl;
-
+import com.sun.enterprise.module.Module;
 import java.io.IOException;
 import java.util.*;
 
