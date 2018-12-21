@@ -44,6 +44,7 @@ import com.sun.enterprise.module.*;
 import com.sun.enterprise.module.bootstrap.BootException;
 import com.sun.enterprise.module.common_impl.AbstractModulesRegistryImpl;
 import com.sun.enterprise.module.common_impl.CompositeEnumeration;
+import com.sun.enterprise.module.Module;
 import org.glassfish.hk2.api.*;
 import org.glassfish.hk2.api.Filter;
 import org.glassfish.hk2.utilities.DescriptorImpl;

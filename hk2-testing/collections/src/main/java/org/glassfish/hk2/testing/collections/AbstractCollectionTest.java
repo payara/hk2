@@ -792,7 +792,7 @@ public abstract class AbstractCollectionTest {
   public void testCollectionToArrayWithArgumentWithNullThrows() {
     Collection collection = createEmptyCollection();
     
-    collection.toArray(null);
+    collection.toArray((Object[])null);
   }
   
   /**

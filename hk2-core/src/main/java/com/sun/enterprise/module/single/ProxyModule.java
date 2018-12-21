@@ -41,7 +41,7 @@
 package com.sun.enterprise.module.single;
 
 import com.sun.enterprise.module.*;
-
+import com.sun.enterprise.module.Module;
 import java.util.List;
 import java.util.ArrayList;
 import java.io.PrintStream;
