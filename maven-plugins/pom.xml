@@ -22,10 +22,10 @@
     <parent>
         <groupId>org.glassfish.hk2</groupId>
         <artifactId>hk2-parent</artifactId>
-        <version>2.5.0</version>
+        <version>2.5.1-SNAPSHOT</version>
     </parent>
     <artifactId>maven-plugins</artifactId>
-    <version>2.5.0</version>
+    <version>2.5.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
