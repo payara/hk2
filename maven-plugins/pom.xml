@@ -46,14 +46,12 @@
         <groupId>org.glassfish.hk2</groupId>
         <artifactId>hk2-parent</artifactId>
         <version>2.5.0-b61.payara-p3</version>
-        <relativePath />
     </parent>
     <artifactId>maven-plugins</artifactId>
-    <version>2.5.0-b61.payara-p3</version>
     <packaging>pom</packaging>
 
     <properties>
-        <hk2.version>2.5.0-b61.payara-p3</hk2.version>
+        <hk2.version>${project.version}</hk2.version>
     </properties>
 
     <modules>
@@ -96,7 +94,7 @@
                         <scm>git</scm>
                         <scmOnly>true</scmOnly>
                     </configuration>
-                </plugin> 
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
