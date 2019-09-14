@@ -173,7 +173,7 @@ public class ServiceLocatorImpl implements ServiceLocator {
     private final LinkedHashSet<ValidationService> allValidators =
             new LinkedHashSet<ValidationService>();
     private final LinkedList<ErrorService> errorHandlers =
-            new LinkedList<ErrorService>();
+            new LinkedList<ErrorService>(Collections.singleton(new DefaultServiceLocatorErrorService()));
     private final LinkedList<ServiceHandle<?>> configListeners =
             new LinkedList<ServiceHandle<?>>();
     
