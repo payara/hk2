@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010, 2018 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2010, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0, which is available at
@@ -16,22 +16,34 @@
 
 package org.glassfish.hk2.classmodel.reflect.impl;
 
-import org.glassfish.hk2.classmodel.reflect.ClassModel;
+import java.util.ArrayList;
+import java.util.List;
 import org.glassfish.hk2.classmodel.reflect.ExtensibleType;
 import org.glassfish.hk2.classmodel.reflect.FieldModel;
+import org.glassfish.hk2.classmodel.reflect.ParameterizedType;
+import org.objectweb.asm.Opcodes;
 
 /**
  * Implementation of a field model
  */
 public class FieldModelImpl extends AnnotatedElementImpl implements FieldModel {
 
-    final TypeProxy type;
     private final ExtensibleType declaringType;
+
+    final TypeProxy type;
+
+    private int access;
+
+    private final List<ParameterizedType> genericTypes = new ArrayList<>();
 
     public FieldModelImpl(String name, TypeProxy type, ExtensibleType declaringType) {
         super(name);
         this.type = type;
         this.declaringType = declaringType;
+    }
+
+    public void setAccess(int access) {
+        this.access = access;
     }
 
     @Override
@@ -45,13 +57,33 @@ public class FieldModelImpl extends AnnotatedElementImpl implements FieldModel {
     }
 
     @Override
+    public String getDeclaringTypeName() {
+        return type.getName();
+    }
+
+    @Override
     public ExtensibleType getType() {
         return (ExtensibleType) type.get();
+    }
+
+    @Override
+    public String getTypeName() {
+        return type.getName();
     }
 
     @Override
     protected void print(StringBuffer sb) {
         super.print(sb);
         sb.append(", type =").append(type.getName());
+    }
+
+    @Override
+    public List<ParameterizedType> getGenericTypes() {
+        return genericTypes;
+    }
+
+    @Override
+    public boolean isTransient() {
+        return (Opcodes.ACC_TRANSIENT & access) == Opcodes.ACC_TRANSIENT;
     }
 }
