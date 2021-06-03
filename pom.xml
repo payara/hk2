@@ -28,7 +28,7 @@
     </parent>
     <groupId>org.glassfish.hk2</groupId>
     <artifactId>hk2-parent</artifactId>
-    <version>2.6.1.payara-p5</version>
+    <version>2.6.1.payara-p6</version>
     <packaging>pom</packaging>
 
     <name>GlassFish HK2</name>
@@ -438,7 +438,6 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
-                    <version>3.0.0-M1</version>
                     <configuration>
                         <retryFailedDeploymentCount>10</retryFailedDeploymentCount>
                     </configuration>
